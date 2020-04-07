@@ -74,6 +74,5 @@ def classification( logm, trans ):
 			count[iclass] = count[iclass] + ind
 	
 	prob = count / np.sum(count) * 100.
-	print 'Terran %(T).1f %%, Neptunian %(N).1f %%, Jovian %(J).1f %%, Star %(S).1f %%' \
-			% {'T': prob[0], 'N': prob[1], 'J': prob[2], 'S': prob[3]}
+	print('Terran {0:.1f}%, Neptunian {1:.1f}%, Jovian {2:.1f}%, Star {3:.1f}%'.format(prob[0],prob[1],prob[2],prob[3]))
 	return None
